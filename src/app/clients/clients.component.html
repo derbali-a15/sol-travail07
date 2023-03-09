@@ -1,0 +1,9 @@
+<h2>Les Clients de la banque choisie</h2>
+<table class="table table-hover">
+  <tr *ngFor="let client of clients">
+      <td>{{client.prenom}}</td>
+      <td>{{client.nomDeFamille}}</td>
+      <td>{{client.telephone}}</td>
+      <td><a class="btn btn-outline-secondary" href="">Comptes</a></td>
+  </tr>
+</table>

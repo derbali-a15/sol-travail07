@@ -1,0 +1,16 @@
+<h1>Mise à jour d'un compte</h1>
+<div class="mb-3">
+    <label for="id" class="form-label">Id du compte à mettre à jour</label>
+    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="compte.id">
+</div>
+<div class="mb-3">
+    <label for="type" class="form-label">nouveau type</label>
+    <input type="text" class="form-control" id="type" name="type" [(ngModel)]="compte.type">
+</div>
+<div class="mb-3">
+    <label for="solde" class="form-label">nouveau solde</label>
+    <input type="text" class="form-control" id="solde" name="solde" [(ngModel)]="compte.solde">
+</div>
+<button class="btn btn-primary" (click)="updateCompte()">Mettre à jour</button>
+
+<!-- {{compte | json}} -->

@@ -1,0 +1,9 @@
+<h1>Liste des banques</h1>
+<table class="table table-hover">
+  <tr *ngFor="let banque of banques">
+      <td>{{banque.nom}}</td>
+      <td>{{banque.ville}}</td>
+      <!-- <td><a class="btn btn-outline-secondary" href="" (click)="chargerClient(banque.id)">Clients</a></td> -->
+      <td><a class="btn btn-outline-secondary" routerLink="/clientsparbanque/{{banque.id}}" routerLinkActive="active">Clients</a></td>
+  </tr>
+</table>

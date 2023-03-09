@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Banque } from './entities/banque';
+import { Banque } from '../entities/banque';
 
-import { RestapiService } from './services/restapi.service';
+import { RestapiService } from '../services/restapi.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-banques',
+  templateUrl: './banques.component.html',
+  styleUrls: ['./banques.component.css']
 })
-export class AppComponent {
-  title = 'travail07';
+export class BanquesComponent {
   banques:Banque[]= []
   
 
@@ -20,6 +19,6 @@ export class AppComponent {
 
   chargerClient(id:number){
     //placer l'id de la banque dans l'adresse URL
-    this.router.navigate(['clientsparbanque', id])
+    this.router.navigate(['/clientsparbanque', id])
   }
 }
