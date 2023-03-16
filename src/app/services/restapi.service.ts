@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Banque } from '../entities/banque';
 import { Client } from '../entities/client';
 import { Compte } from '../entities/compte';
+import { Operation } from '../entities/operation';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +26,12 @@ export class RestapiService {
     return this.http.get<Compte[]>(this.url  + 'comptes/client/' + idClient)
   }
 
+  getCompteById(idCompte:number): Observable<Compte>{
+    return this.http.get<Compte>(this.url  + 'comptes/' + idCompte)
+  }
+
   //mise à jour
-  updateCompte(id:number, op:string, montant:number): Observable<Compte>{
-    return this.http.put<Compte>(this.url + 'comptes/v2/' + id + '/' + op + '/' + montant, null)
+  updateCompte(operation:Operation): Observable<Compte>{
+    return this.http.put<Compte>(this.url + 'comptes/v2/' + operation.idCompte + '/' + operation.op + '/' + operation.montantOp, null)
   }
 }

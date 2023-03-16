@@ -18,8 +18,4 @@ export class AppComponent {
     this.api.getBanques().subscribe((res) => this.banques = res)
   }
 
-  chargerClient(id:number){
-    //placer l'id de la banque dans l'adresse URL
-    this.router.navigate(['clientsparbanque', id])
-  }
 }

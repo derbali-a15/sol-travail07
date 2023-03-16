@@ -8,13 +8,15 @@ import { ClientsComponent } from './clients/clients.component';
 import { GestioncomptesComponent } from './gestioncomptes/gestioncomptes.component';
 import { FormsModule } from '@angular/forms';
 import { BanquesComponent } from './banques/banques.component';
+import { ComptesComponent } from './comptes/comptes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientsComponent,
     GestioncomptesComponent,
-    BanquesComponent
+    BanquesComponent,
+    ComptesComponent
   ],
   imports: [
     BrowserModule,

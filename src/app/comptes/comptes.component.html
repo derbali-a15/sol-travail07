@@ -1,0 +1,8 @@
+<h2>Les comptes du client choisi</h2>
+<table class="table table-hover">
+    <tr *ngFor="let compte of comptes">
+        <td>{{compte.type}}</td>
+        <td>{{compte.solde | currency:'CAD':'symbol'}}</td>
+        <td><a class="btn btn-outline-secondary" routerLink="/modifiercompte/{{compte.id}}/client/{{idClient}}" routerLinkActive="active">Dépôt/Retrait</a></td>
+    </tr>
+</table>
